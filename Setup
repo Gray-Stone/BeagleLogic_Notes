@@ -1,0 +1,38 @@
+Init Notes:
+  Beagle bone is not like raspberry pi. By default, it does not have video output, 
+  Things are connected through usb (eathernet over USB).
+  It come with a image flashed onto the onboard eMMC (4G). So it can boot without SD card. 
+  
+  Currently using BBBW with v4.9 come perinstalled. 
+
+Step1: Getting BeagleLogic to work:
+  
+  * Go to https://beaglelogic.readthedocs.io/en/latest/index.html and get the system image. 
+  * Burn the image into a sd card, and insert that to beaglebone
+  * Hold user button (one on USB-A side) then plug in power. 
+    note: if pwd led is flashing, might be not enough power or something. 
+    Try connect both barrel jack (5V only) and usb micro at the same time.  
+  * Solid blue pwd led means we are good. 
+  
+  * wait a bit - - - - - - - - - - -
+  * a folder show pop up and a network device should show up 
+      (it emulate a storage and a eathernet port under microA connector)
+      (under windows, It is a eathernet pluged in with name: unreconized network) 
+  * If using Windows, try 192.168.7.2. beaglebone homepage pop up means connection is good and it's running. 
+  * try 192.168.7.2:4000. If beaglelogic page show up, Means everything is working
+
+Step2: Get WIFI !!!!
+  * SSH into BBBW through eathernet over usb or serial (GPIO). 
+  * use connmanctl to config wifi 
+      Example: https://www.digikey.com/en/maker/blogs/2017/how-to-setup-wifi-on-the-beaglebone-black-wireless
+              https://www.fis.gatech.edu/how-to-configure-bbw-wifi/
+              
+  * Then the device could be accessed wirelessly. 
+  
+Step3: Get CMD setup (or not)
+  * install what ever your favourite combo for cmd. 
+  
+  
+Step4: Try to get thing show up under sigrok and pulseview.
+  
+  
